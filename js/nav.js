@@ -54,7 +54,7 @@ document.querySelector('.main-menu5').addEventListener('mouseleave', function (e
 let nav = document.querySelector("header");
         
     document.addEventListener('wheel', function(e) {
-        if(event.deltaY > 0 && scrollY > 500){
+        if(e.deltaY > 0 && scrollY > 500){
             nav.classList.add("nav-hide");
         }else {
             nav.classList.remove("nav-hide");
