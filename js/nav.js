@@ -49,13 +49,22 @@ document.querySelector('.main-menu5').addEventListener('mouseleave', function (e
     document.querySelector('.sub-menu5').style.visibility = 'hidden';
 })
 
-document.addEventListener('scroll', function () {
-    let myScroll = window.scrollY;
-    console.log(myScroll);
+/* scroll event */
 
-    if (myScroll > 699) {
-        document.querySelector('header').classList.add('hide');
-    } else {
-        document.querySelector('header').classList.remove('hide');
-    }
-})
+let nav = document.querySelector("header");
+        
+    document.addEventListener('wheel', function(e) {
+        if(event.deltaY > 0 && scrollY > 500){
+            nav.classList.add("nav-hide");
+        }else {
+            nav.classList.remove("nav-hide");
+        }
+    });
+
+    document.addEventListener('scroll', function(e) {
+        if(scrollY > 500) {
+            nav.style.backgroundColor = "rgba(225, 232, 234, 0.82)";
+        }else {
+            nav.style.backgroundColor = "rgba(225, 232, 234, 1)";
+        }
+    });
