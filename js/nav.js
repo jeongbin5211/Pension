@@ -63,8 +63,8 @@ let nav = document.querySelector("header");
 
     document.addEventListener('scroll', function(e) {
         if(scrollY > 500) {
-            nav.style.backgroundColor = "rgba(225, 232, 234, 0.82)";
-        }else {
             nav.style.backgroundColor = "rgba(225, 232, 234, 1)";
+        }else {
+            nav.style.backgroundColor = "rgba(225, 232, 234, 0.82)";
         }
     });
