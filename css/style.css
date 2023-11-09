@@ -2,6 +2,10 @@
     width: 100%;
 }
 
+.hide {
+    transform: translateY(-100px);
+}
+
 header {
     position: fixed;
     top: 0;
@@ -9,6 +13,7 @@ header {
     width: 100%;
     height: 100px;
     z-index: 9999;
+    transition: 0.2s;
 }
 
 .header-wrap {
@@ -54,8 +59,6 @@ nav {
     float: right;
     width: 700px;
     height: 55px;
-    /* display: flex; */
-    
 }
 
 .nav-main {
@@ -96,7 +99,6 @@ nav {
     padding: 0 5px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8);
-    /* border-bottom: 1px solid #fff; */
 }
 
 .sub-menu li:hover {
@@ -119,7 +121,6 @@ nav {
     height: 800px;
     background: url('../images/팬션.jpg') 50% 50% no-repeat;
     background-size: cover;
-    
     z-index: 0;
 }
 
@@ -261,13 +262,18 @@ h2 {
 .facil-item {
     display: flex;
     justify-content: space-between;
+    
+}
+
+.facil-item li:hover {
+    transform: translateY(-5px);
 }
 
 .facil-item li {
     width: 280px;
     height: 350px;
     border-radius: 50px;
-    /* overflow: hidden; */
+    transition: 0.3s;
 }
 
 .facil-item li:nth-child(even) {
@@ -308,7 +314,8 @@ h2 {
     background-color: rgba(240, 255, 255, 0.9);
     text-align: center;
     padding-top: 30px;
-    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
 }
 
 /* 부대시설 끝 */

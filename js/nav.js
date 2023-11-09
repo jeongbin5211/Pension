@@ -48,3 +48,14 @@ document.querySelector('.main-menu5').addEventListener('mouseleave', function (e
     e.preventDefault();
     document.querySelector('.sub-menu5').style.visibility = 'hidden';
 })
+
+document.addEventListener('scroll', function () {
+    let myScroll = window.scrollY;
+    console.log(myScroll);
+
+    if (myScroll > 699) {
+        document.querySelector('header').classList.add('hide');
+    } else {
+        document.querySelector('header').classList.remove('hide');
+    }
+})
